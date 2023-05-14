@@ -1,0 +1,29 @@
+<div class="contenedor">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10">
+        <h3 class="text-center mb-4"> Bajar Datos de un API </h3>
+        <h3 class="text-center mb-4"> Oswaldo Enrique Cruz Sarmientos</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"> ID </th>
+              <th scope="col"> Nomnbre </th>
+              <th scope="col"> Apellido </th>
+              <th scope="col"> Avatar </th>
+            </tr>
+          </thead>
+
+          <tbody *ngFor="let datos of data.data">
+            <tr class="table-light">
+              <td> {{datos.id}} </td>
+              <td> {{datos.first_name}} </td>
+              <td> {{datos.last_name}} </td>
+              <td> <img [src]="datos.avatar" alt="" width="65%" /> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
